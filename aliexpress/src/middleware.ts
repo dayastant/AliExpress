@@ -2,7 +2,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 export default clerkMiddleware(async (auth, req, next) => {
   const protectedRoutes = createRouteMatcher([
-    "/",
+    "/dashboard/(.*)",
 
   ]);
 
@@ -20,4 +20,4 @@ export const config = {
     // Always run for API routes
     '/(api|trpc)(.*)',
   ],
-};
+}; 
