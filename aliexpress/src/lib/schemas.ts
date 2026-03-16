@@ -1,6 +1,5 @@
-import z from "zod";
 
-
+import * as z from "zod";
 
 // Catgeory form schema
 export const CategoryFormSchema = z.object({
@@ -34,5 +33,3 @@ export const CategoryFormSchema = z.object({
     }),
   featured: z.boolean().default(false),
 });
-
-
