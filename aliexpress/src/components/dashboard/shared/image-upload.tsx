@@ -71,10 +71,10 @@ const ImageUpload: FC<ImageUploadProps> = ({
             alt=""
             width={300}
             height={300}
-            className="w-52 h-52 rounded-full object-cover absolute top-0 left-0 bottom-0 right-0"
+            className="absolute top-0 bottom-0 left-0 right-0 object-cover rounded-full w-52 h-52"
           />
         )}
-        <CldUploadWidget onSuccess={onUpload} uploadPreset="ufb48euh">
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
@@ -121,10 +121,10 @@ const ImageUpload: FC<ImageUploadProps> = ({
             alt=""
             width={1200}
             height={1200}
-            className="w-full h-full rounded-lg object-cover"
+            className="object-cover w-full h-full rounded-lg"
           />
         )}
-        <CldUploadWidget onSuccess={onUpload} uploadPreset="ufb48euh">
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
@@ -158,7 +158,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
   } else {
     return (
       <div>
-        <div className="mb-4 flex items-center gap-4">
+        <div className="flex items-center gap-4 mb-4">
           {value.length > 0 &&
             !dontShowPreview &&
             value.map((imageUrl) => (
@@ -167,7 +167,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
                 className="relative w-[200px] min-h-[100px] max-h-[200px]"
               >
                 {/* Delete image btn */}
-                <div className="z-10 absolute top-2 right-2">
+                <div className="absolute z-10 top-2 right-2">
                   <Button
                     onClick={() => onRemove(imageUrl)}
                     type="button"
@@ -188,7 +188,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
               </div>
             ))}
         </div>
-        <CldUploadWidget onSuccess={onUpload} uploadPreset="ufb48euh">
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
