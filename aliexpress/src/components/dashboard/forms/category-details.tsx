@@ -74,7 +74,7 @@ const CategoryDetails: FC<CategoryDetailsProps> = ({ data }) => {
   useEffect(() => {
     if (data) {
       form.reset({
-        name: data?.name,
+        name: data.name ?? "",
         image: [{ url: data?.image }],
         url: data?.url,
         featured: data?.featured,
@@ -214,7 +214,8 @@ const CategoryDetails: FC<CategoryDetailsProps> = ({ data }) => {
                   ? "loading..."
                   : data?.id
                   ? "Save category information"
-                  : "Create category"}
+                  : "Create category"
+                }
               </Button>
             </form>
           </Form>

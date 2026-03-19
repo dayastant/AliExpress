@@ -70,6 +70,21 @@ export const upsertCategory = async (category: Category) => {
     return categoryDetails;
   } catch (error) {
     // Log and re-throw any errors
+    console.error("Error upserting category:", error);
     throw error;
   }
 };
+
+
+
+
+export const getAlllCategories = async () => {
+  const categories = await db.category.findMany({
+    orderBy : {
+      updatedAt : "desc",
+    }
+  });
+  return categories;
+}
+
+

@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import {
   ClerkProvider,
 } from '@clerk/nextjs'
+import ModalProvider from "@/providers/model-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const barlowFont = Barlow({ subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
         >
-          {children}
+          <ModalProvider>{children}</ModalProvider>
         </ThemeProvider>
         </body>
     </html>
