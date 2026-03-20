@@ -10,10 +10,6 @@ export default async function AdminCategoriesPage() {
 
     if (!categories) return null;
 
-    const CLOUDINARY_CLOUD_KEY = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
-
-    if (!CLOUDINARY_CLOUD_KEY) return null;
-
     return (
         <DataTable actionButtonText={
             <>
@@ -21,11 +17,11 @@ export default async function AdminCategoriesPage() {
                 Create category
             </>
         }
-            modalChildren={<CategoryDetails cloudinary_key= {CLOUDINARY_CLOUD_KEY} />}
+            modalChildren={<CategoryDetails  />}
             filterValue="name"
             data={categories}
             searchPlaceholder="Search category name..."
-            columns={}
+            columns={[]}
         />
     );
 }

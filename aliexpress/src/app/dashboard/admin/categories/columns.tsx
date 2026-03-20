@@ -149,7 +149,7 @@ const CellActions: React.FC<CellActionsProps> = ({ rowData }) => {
                 // Custom modal component
                 <CustomModal>
                   {/* Store details component */}
-                  <CategoryDetails data={{ ...rowData }} />
+                  <CategoryDetails  data={{ ...rowData }} />
                 </CustomModal>,
                 async () => {
                   return {

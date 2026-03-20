@@ -17,7 +17,6 @@ interface ImageUploadProps {
   value: string[];
   type: "standard" | "profile" | "cover";
   dontShowPreview?: boolean;
-  cloudinary_key:string;
   error?: boolean;
 }
 
@@ -28,7 +27,6 @@ const ImageUpload: FC<ImageUploadProps> = ({
   value,
   type,
   dontShowPreview,
-  cloudinary_key,
   error,
 }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -76,7 +74,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
             className="absolute top-0 bottom-0 left-0 right-0 object-cover rounded-full w-52 h-52"
           />
         )}
-        <CldUploadWidget onSuccess={onUpload} uploadPreset={cloudinary_key}>
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
@@ -126,7 +124,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
             className="object-cover w-full h-full rounded-lg"
           />
         )}
-        <CldUploadWidget onSuccess={onUpload} uploadPreset={cloudinary_key}>
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
@@ -190,7 +188,7 @@ const ImageUpload: FC<ImageUploadProps> = ({
               </div>
             ))}
         </div>
-        <CldUploadWidget onSuccess={onUpload} uploadPreset={cloudinary_key}>
+        <CldUploadWidget onSuccess={onUpload} uploadPreset="dcfcmbfml">
           {({ open }) => {
             const onClick = () => {
               open();
