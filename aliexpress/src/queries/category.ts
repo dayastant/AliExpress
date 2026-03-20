@@ -86,5 +86,3 @@ export const getAlllCategories = async () => {
   });
   return categories;
 }
-
-
