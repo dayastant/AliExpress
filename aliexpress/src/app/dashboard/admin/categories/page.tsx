@@ -3,6 +3,7 @@ import DataTable from "@/components/ui/data-table";
 import { getAlllCategories } from "@/queries/category";
 import { Plus } from "lucide-react";
 import React from "react";
+import { columns } from "./columns";
 
 export default async function AdminCategoriesPage() {
 
@@ -21,7 +22,7 @@ export default async function AdminCategoriesPage() {
             filterValue="name"
             data={categories}
             searchPlaceholder="Search category name..."
-            columns={[]}
+            columns={columns}
         />
     );
 }

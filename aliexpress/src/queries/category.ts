@@ -149,5 +149,7 @@ export const deleteCategory = async (categoryId: string) => {
       id: categoryId,
     }
   })
+
+  return response;
 }
 
